@@ -1,8 +1,10 @@
 :root{--blue:#0A4DA2;--blue-d:#083A7A;--sky:#EEF5FD;--sun:#FFB81C;--sun-d:#E6A200;--ink:#12233B;--gray:#51637C;--line:#D9E4F1;--red:#D64545;--nav-breakpoint:768px}
 *{margin:0;padding:0;box-sizing:border-box}
-html{overflow-x:hidden}
-body{font-family:'Source Sans 3',sans-serif;color:var(--ink);background:#fff;line-height:1.6;overflow-x:hidden}
+html{overflow-x:clip}
+body{font-family:'Source Sans 3',sans-serif;color:var(--ink);background:#fff;line-height:1.6;overflow-x:clip}
 h1,h2,h3,h4{font-family:'Figtree',sans-serif;letter-spacing:-.015em;line-height:1.12}
+p{margin-bottom:16px}
+p:last-child{margin-bottom:0}
 .skip-link{position:absolute;left:-999px;top:0;background:var(--blue);color:#fff;padding:10px 18px;z-index:999;border-radius:0 0 8px 0}
 .skip-link:focus{left:0}
 .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
@@ -62,7 +64,7 @@ nav.sitenav .wrap{display:flex;align-items:center;justify-content:space-between;
 .strip span:before{content:"\2714 ";color:var(--blue)}
 .sec{padding:76px 0}
 .sec.alt{background:var(--sky)}
-.kick{color:var(--blue);font-family:'Figtree';font-weight:700;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase}
+.kick{color:var(--blue);font-family:'Figtree';font-weight:700;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;display:block;margin-top:34px}
 .sec h2{font-size:32px;margin:10px 0 12px}
 .sec .sub{color:var(--gray);font-size:16.5px;margin-bottom:34px;max-width:620px}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
@@ -165,6 +167,7 @@ footer.sitefooter .legal{margin-top:30px;padding-top:20px;border-top:1px solid #
 .sec.alt .factor{background:#fff}
 .factor b{display:block;font-family:'Figtree';font-size:14px;color:var(--ink);margin-bottom:3px}
 @media(max-width:900px){.factors{grid-template-columns:1fr}}
+@media(max-width:900px){.sidecard{position:static}}
 footer.sitefooter .legal a{display:inline;color:#8FA3BE;text-decoration:underline;margin-bottom:0}
 footer.sitefooter .legal a:hover{color:var(--sun)}
 .logo-img{height:44px;width:auto;display:block}
